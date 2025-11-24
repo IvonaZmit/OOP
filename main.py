@@ -99,3 +99,5 @@ plants.append(Rosemary)
 
 for plant in plants:
     print(plant.name, plant.latin_name, plant.annual, plant.continent, plant.adult_height, plant.edible)
+
+
