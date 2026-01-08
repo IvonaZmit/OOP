@@ -18,25 +18,28 @@ Hardy = Actor()
 Hardy.name = "Tom"
 Hardy.surname = "Hardy"
 Hardy.birth_year = "1977"
+Hardy.films_list = "Venom, Venom 2, Havoc"
 print(Hardy.__str__())
-Hardy = Actor("Tom", "Hardy", 1972)
-print(Hardy.name, Hardy.surname, Hardy.birth_year)
+Hardy = Actor("Tom", "Hardy", 1977, "Venom, Venom 2, Havoc")
+print(Hardy.name, Hardy.surname, Hardy.birth_year, Hardy.films_list)
 
 DiCaprio = Actor()
 DiCaprio.name = "Leonardo"
 DiCaprio.surname = "DiCaprio"
 DiCaprio.birth_year = "1974"
+DiCaprio.films_list = "Titanic, Inception, Billy"
 print(DiCaprio.__str__())
-DiCaprio = Actor("Leonardo", "DiCaprio", 1974)
-print(DiCaprio.name, DiCaprio.surname, DiCaprio.birth_year)
+DiCaprio = Actor("Leonardo", "DiCaprio", 1974, "Titanic, Inception, Billy")
+print(DiCaprio.name, DiCaprio.surname, DiCaprio.birth_year, DiCaprio.films_list)
 
 Jolie = Actor()
 Jolie.name = "Angelina"
 Jolie.surname = "Jolie"
 Jolie.birth_year = "1975"
+Jolie.films_list = "Salt, Wanted, Mr.&Mrs. Smith"
 print(Jolie.__str__())
-Jolie = Actor("Angelina", "Jolie", 1975)
-print(Jolie.name, Jolie.surname, Jolie.birth_year)
+Jolie = Actor("Angelina", "Jolie", 1975, "Salt, Wanted, Mr.&Mrs. Smith")
+print(Jolie.name, Jolie.surname, Jolie.birth_year, Jolie.films_list)
 
 print("----------------")
 
@@ -46,7 +49,7 @@ actors.append(DiCaprio)
 actors.append(Jolie)
 
 for actor in actors:
-    print(actor.name, actor.surname, actor.birth_year)
+    print(actor.name, actor.surname, actor.birth_year, actor.films_list)
 
 
 print("------------------")
@@ -100,4 +103,19 @@ plants.append(Rosemary)
 for plant in plants:
     print(plant.name, plant.latin_name, plant.annual, plant.continent, plant.adult_height, plant.edible)
 
+print("-----------------------")
+#Sukurti klasę Student
+#vardas (suformatuojame iki teisingo užrašymo)
+#pavardė (suformatuojame iki teisingo užrašymo)
+#gimimo data date
+#studies dictionary{
+#           "subject": pvz ekoligija
+#           "disciplines:[
+#               {"matematika": [8,7,9]},
+#               { "geografija": [7,5,6,10,8,9,9]}
+#            ]
+#sukurti metodą get_age() kuris gražintų tikslų, gražiai suformatuotą amžių su metais, mėnesiais ir dienomis
+#sukurti metodą, kuris padavus disciplinos pavadinimą gražintų jos pažymių vidurkį
+#sukurti metodą, kuris paskaičiuotų visų disciplinų(int) vidurkių vidurkį(double). galima kurtis pagalbines funkcijas.
+#parašyti __str__ kuris gražiai atspausdintų visą išsamią, gražiai suformatuotą studento informaciją
 
