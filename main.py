@@ -14,6 +14,8 @@
 from Actor import Actor
 from Plant import Plant
 from Student import Student
+from datetime import date
+from statistics import mean
 
 Hardy = Actor()
 Hardy.name = "Tom"
@@ -119,4 +121,25 @@ print("-----------------------")
 #sukurti metodą, kuris padavus disciplinos pavadinimą gražintų jos pažymių vidurkį
 #sukurti metodą, kuris paskaičiuotų visų disciplinų(int) vidurkių vidurkį(double). galima kurtis pagalbines funkcijas.
 #parašyti __str__ kuris gražiai atspausdintų visą išsamią, gražiai suformatuotą studento informaciją
+
+studies = {
+    "subject": "ekologija",
+    "disciplines": [
+        {"matematika": [8, 7, 9]},
+        {"geografija": [7, 5, 6, 10, 8, 9, 9]}
+    ]
+}
+
+Jonas = Student()
+Jonas.name = "Jonas"
+Jonas.surname = "Petraitis"
+Jonas.birth_date = date(1985, 8, 20)
+Jonas.studies = {"subject": "ekologija", "disciplines": [{"matematika": [8, 7, 9]},{"geografija": [7, 5, 6, 10, 8, 9, 9]}]}
+
+print(Jonas.__str__())
+
+Jonas = Student("Jonas", "Petraitis", date(1985, 8, 20), "matematika, geografija")
+print(Jonas.name, Jonas.surname, Jonas.birth_date, Jonas.studies)
+
+print("----------------")
 
