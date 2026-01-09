@@ -13,6 +13,7 @@
 
 from Actor import Actor
 from Plant import Plant
+from Student import Student
 
 Hardy = Actor()
 Hardy.name = "Tom"
