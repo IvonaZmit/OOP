@@ -8,19 +8,18 @@ class Student(object):
         self.birth_date = birth_date
         self.studies = studies
 
-    def add_grade(self, subject= str, grade= int):
-        for object in self.studies["disciplines"]:
-            if subject in object:
-                object[subject].append(grade)
-                return
-        self.studies["disciplines"].append({subject:[grade]})
-
-    def average(self, subject= str):
-        for object in self.studies["disciplines"]:
-            if subject in object:
-                return round(mean(object[subject]), 2)
+    def get_average_by_discipline(self, discipline= str):
+        for object in self.studies.get("disciplines", []):
+            if discipline in object:
+                return round(mean(object[discipline]), 2)
         return None
 
+    def get_age(self):
+        today = date.today()
+        age = today.year - self.birth_date.year
+        if (today.month, today.day) < (self.birth_date.month, self.birth_date.day):
+            age -= 1
+        return age
 
     def __str__(self):
-        return f"Vardas: {self.name}, Pavardė: {self.surname}, Gimimo metai: {self.birth_date}, Disciplina: {self.studies}."
+        return f"Vardas: {self.name}\n" f"Pavardė: {self.surname}\n" f"Gimimo metai: {self.birth_date}\n" f"Amžius: {self.get_age()}"
