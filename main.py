@@ -132,8 +132,8 @@ Jonas.studies = {
     ]
 }
 
-#print("Matematikos vidurkis:", Jonas.get_average_by_discipline("matematika"))
-#print("Geografijos vidurkis:", Jonas.get_average_by_discipline("geografija"))
+print("Matematikos vidurkis:", Jonas.get_average_by_discipline("matematika"))
+print("Geografijos vidurkis:", Jonas.get_average_by_discipline("geografija"))
 #print("Bendras vidurkis:", Jonas.get_overall_average_by_discipline())
 print()
 print(Jonas)
